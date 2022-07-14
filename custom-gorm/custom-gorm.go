@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: Gavin
  * @Date: 2022-07-11 16:03:01
- * @LastEditTime: 2022-07-14 17:08:11
+ * @LastEditTime: 2022-07-14 17:52:21
  * @LastEditors: Gavin
  */
 package customgorm
@@ -85,7 +85,7 @@ func parseToken(tokenString string) {
 	})
 
 	if claims, ok := token.Claims.(*MyClaims); ok && token.Valid {
-		fmt.Printf("%v %v", claims.Username, claims.StandardClaims.ExpiresAt)
+		fmt.Printf("%v %v\n", claims.Username, claims.StandardClaims.ExpiresAt)
 	} else {
 		fmt.Println(err)
 	}
