@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: Gavin
  * @Date: 2022-07-06 22:37:08
- * @LastEditTime: 2022-07-14 12:47:31
+ * @LastEditTime: 2022-08-04 14:43:42
  * @LastEditors: Gavin
  */
 package main
@@ -10,7 +10,7 @@ package main
 import (
 	"fmt"
 
-	customgorm "gin-web/custom-gorm"
+	"gin-web/router"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
@@ -72,7 +72,9 @@ func main() {
 
 	// r := gin.Default()
 
-	customgorm.OnServer()
+	// customgorm.OnServer()
+	router.InitRouter()
+
 	// db, _ := gorm.Open("mysql", "root:yfqdmr@tcp(ec2-18-183-20-186.ap-northeast-1.compute.amazonaws.com:3306)/artemis?charset=utf8mb4&parseTime=True&loc=Local")
 	// db.AutoMigrate(&Pet{})
 	//更新 单一更新
